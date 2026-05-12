@@ -13,7 +13,7 @@ class AccountMoveLine(models.Model):
         # the per-partial exchange differences (line 2651) and the full-batch
         # exchange differences (line 2740) that would otherwise be auto-created.
         if self._exchange_difference_disabled():
-            return super().with_context(no_exchange_difference=True)._reconcile_plan_with_sync(plan_list, all_amls)
+            self = self.with_context(no_exchange_difference=True)
         return super()._reconcile_plan_with_sync(plan_list, all_amls)
 
     def _create_reconciliation_partials(self):
