@@ -8,6 +8,7 @@
     "installable": True,
     "application": False,
     "summary": "Disable automatic exchange difference journal entries on reconciliation",
+    "license": "LGPL-3",
     "depends": ["account"],
     "data": [],
 }
